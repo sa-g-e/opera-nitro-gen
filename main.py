@@ -29,8 +29,6 @@ def gen():
         data = {
             "partnerUserId": genuid()
         }
-        print(data)
-
         try:
             proxy = choice(proxies)
             r = session.post(url, json=data, headers=headers, proxies={'http': proxy})
